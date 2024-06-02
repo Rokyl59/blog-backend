@@ -67,11 +67,33 @@
                                 <div class="col-md-4">
                                     <div class="card blog__slide text-center">
                                         <div class="blog__slide__img">
-                                            <img class="card-img rounded-0" src="{{ post.image_url }}" alt="">
+                                            <img class="card-img rounded-0" src="{{ post.image_url|default:"{% static 'img/banner/blog.png' %}" }}" alt="">
                                         </div>
                                         <div class="blog__slide__content">
                                             <h3><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></h3>
                                             <p>{{ post.published_at|date:"F j, Y" }}</p>
+                                            <p>{{ post.text|truncatewords:30 }}</p>
+                                            <p>Автор: {{ post.author }}</p>
+                                            <p>Комментариев: {{ post.comments_amount }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <h2>Свежие посты</h2>
+                        <div class="row">
+                            {% for post in fresh_posts %}
+                                <div class="col-md-12">
+                                    <div class="card blog__slide text-center">
+                                        <div class="blog__slide__img">
+                                            <img class="card-img rounded-0" src="{{ post.image_url|default:"{% static 'img/banner/blog.png' %}" }}" alt="">
+                                        </div>
+                                        <div class="blog__slide__content">
+                                            <h3><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></h3>
+                                            <p>{{ post.published_at|date:"F j, Y" }}</p>
+                                            <p>{{ post.text|truncatewords:30 }}</p>
+                                            <p>Автор: {{ post.author }}</p>
+                                            <p>Комментариев: {{ post.comments_amount }}</p>
                                         </div>
                                     </div>
                                 </div>
