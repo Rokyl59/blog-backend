@@ -8,6 +8,7 @@ __pycache__/
 editorconfig
 /media
 /fonts
+/static/media
 
 # Distribution / packaging
 .Python
