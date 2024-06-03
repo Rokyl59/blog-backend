@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Remake Barber - Contact</title>
-    <link rel="icon" href="{% static 'media/favicon.png' %}" type="image/png">
+    <title>Sensive Blog - Contact</title>
+    <link rel="icon" href="{% static '../media/favicon.png' %}" type="image/png">
 
 
     <link rel="stylesheet" href="{% static 'css/styles.min.css' %}">
@@ -18,7 +18,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container box_1620">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand logo_h" href="{% url 'index' %}"><img src="{% static 'media/logo.png' %}" alt=""></a>
+            <a class="navbar-brand logo_h" href="{% url 'index' %}"><img src="{% static '../media/logo.png' %}" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -66,7 +66,7 @@
     <section class="section-margin--small section-margin">
       <div class="container">
         <div class="d-none d-sm-block mb-5 pb-4">
-          Тут будет карта
+          {{ html_map|safe }}
         </div>
 
 
