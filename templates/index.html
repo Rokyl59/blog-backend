@@ -46,7 +46,7 @@
         <section class="mb-30px">
             <div class="container">
                 <div class="hero-banner">
-                    <img src="{% static 'media/hero-banner.png' %}" alt="">
+                    <img src="{% static 'img/hero-banner.png' %}" alt="">
                     <div class="hero-banner__content">
                         <h3>Tours &amp; Travels</h3>
                         <h1>Amazing Places on earth</h1>
@@ -70,7 +70,7 @@
                                             {% if post.image_url %}
                                                 <img class="img-fluid" src="{{ post.image_url }}" alt="">
                                             {% else %}
-                                                <img class="img-fluid" src="{% static 'media/banner/blog.png' %}" alt="">
+                                                <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="">
                                             {% endif %}
                                         </div>
                                         <div class="blog__slide__content">
@@ -88,7 +88,7 @@
                                         {% if post.image_url %}
                                             <img class="img-fluid" src="{{ post.image_url }}" alt="">
                                         {% else %}
-                                            <img class="img-fluid" src="{% static 'media/banner/blog.png' %}" alt="">
+                                            <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="">
                                         {% endif %}
                                         <ul class="thumb-info">
                                             <li><a href="#"><i class="ti-user"></i>{{ post.author }}</a></li>
